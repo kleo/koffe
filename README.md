@@ -3,6 +3,7 @@
 Customized Unifi controller hotspot vouchers. Paper cutter friendly.
 
 Docker image: jacobalberty/unifi:v8.0.28
+
 Controller version: UniFi Network Application 8.0.28
 
 Pages: 5
