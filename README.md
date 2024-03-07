@@ -18,11 +18,11 @@ Pages per sheet: 1
 
 Margins: Custom
 
-Top: 0.4"
+Top: 0.1"
 
-Bottom: 0.18"
+Bottom: 0"
 
-Left: 0.06"
+Left: 0.04"
 
 Right: 0"
 

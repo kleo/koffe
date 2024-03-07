@@ -13,7 +13,7 @@ parser.add_argument('-p', '--password', default='', help='the controller passwor
 parser.add_argument('-b', '--port', default='8443', help='the controller port (default "8443")')
 parser.add_argument('-v', '--version', default='v5', help='the controller base version (default "v5")')
 parser.add_argument('-s', '--siteid', default='default', help='the site ID, UniFi >=3.x only (default "default")')
-parser.add_argument('-V', '--no-ssl-verify', default=False, action='store_true', help='Don\'t verify ssl certificates')
+parser.add_argument('-V', '--no-ssl-verify', default='False', action='store_true', help='Don\'t verify ssl certificates')
 parser.add_argument('-C', '--certificate', default='', help='verify with ssl certificate pem file')
 args = parser.parse_args()
 
@@ -40,11 +40,12 @@ with tag('html'):
             text('''
             body {
                 font-family: Arial, sans-serif;
+                margin: 0mm;
             }
             .voucher {
-                border: 1px dashed #000;
-                padding: 5px;
-                font-size: 15px;
+                border: 0.5mm dashed #000;
+                padding: 1mm;
+                font-size: 4.2mm;
                 display: inline-block;
                 text-align: center;
                 font-weight: bold;
