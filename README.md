@@ -2,6 +2,10 @@
 
 Customized Unifi controller hotspot vouchers. Paper cutter friendly.
 
+![](https://raw.githubusercontent.com/kleo/koffe/master/Screenshot%20from%202024-03-07%2013-48-56.png)
+
+## Config
+
 Docker image: jacobalberty/unifi:v8.0.28
 
 Controller version: UniFi Network Application 8.0.28
@@ -27,17 +31,5 @@ Left: 0.04"
 Right: 0"
 
 Options:
-
-Headers and footers: unchecked
-
-Background graphics: unchecked
-
-# Unifi voucher customization attempt
-
-I attempted modifying these files for customizing the vouchers. Fail.
-
-/usr/lib/unifi/webapps/ROOT/app-unifi/react/data/locales/en/hotspot.cd8e4e169c10a936b55cb15426ae04b5.json
-
-/usr/lib/unifi/webapps/ROOT/pages/voucher.jsp
-
-/usr/lib/unifi/webapps/ROOT/app-unifi/angular/gb033a9781/locales/en/vouchers.json
+- Headers and footers: unchecked
+- Background graphics: unchecked
