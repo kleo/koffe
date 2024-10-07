@@ -1,10 +1,9 @@
 #!/usr/bin/env python
 
 import argparse
-
 from pyunifi.controller import Controller
-
 from yattag import Doc
+import os
 
 parser = argparse.ArgumentParser()
 parser.add_argument('-c', '--controller', default='unifi', help='the controller address (default "unifi")')
@@ -38,6 +37,9 @@ with tag('html'):
     with tag('head'):
         with tag('style'):
             text('''
+            @page {
+                margin: 0.1in 0in 0in 0.04in;
+            }
             body {
                 font-family: Arial, sans-serif;
                 margin: 0mm;
@@ -64,3 +66,8 @@ with tag('html'):
 
 with open('vouchers.html', 'w') as f:
     f.write(doc.getvalue())
+
+os.system("chromium --headless --no-sandbox --disable-gpu --no-pdf-header-footer --print-to-pdf=vouchers.pdf vouchers.html")  
+
+file_path = "vouchers.pdf"
+os.system(f"lpr -P DCPT310 {file_path}")
