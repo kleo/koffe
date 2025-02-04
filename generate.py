@@ -4,6 +4,7 @@ import argparse
 from pyunifi.controller import Controller
 from yattag import Doc
 import os
+import pyotp
 
 parser = argparse.ArgumentParser()
 parser.add_argument('-c', '--controller', default='unifi', help='the controller address (default "unifi")')
@@ -21,7 +22,10 @@ ssl_verify = (not args.no_ssl_verify)
 if ssl_verify and len(args.certificate) > 0:
         ssl_verify = args.certificate
 
-c = Controller(args.controller, args.username, args.password, args.port, args.version, args.siteid, ssl_verify=ssl_verify)
+totp = pyotp.TOTP('')
+mfa_token = totp.now()
+
+c = Controller(args.controller, args.username, args.password, mfa_token, args.port, args.version, args.siteid, ssl_verify=ssl_verify)
 
 def format_code(string):
         length_string = len(string)
