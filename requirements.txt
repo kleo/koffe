@@ -1,8 +1,8 @@
-certifi==2024.2.2
-charset-normalizer==3.3.2
-idna==3.6
+certifi==2025.8.3
+charset-normalizer==3.4.3
+idna==3.10
 pyotp==2.9.0
-pyunifi==2.21
-requests==2.31.0
-urllib3==2.2.1
-yattag==1.15.2
+pyunifi @ git+https://github.com/kleo/pyunifi.git@330d553177d947fa84a7b32b76d688411132c365
+requests==2.32.5
+urllib3==2.5.0
+yattag==1.16.1

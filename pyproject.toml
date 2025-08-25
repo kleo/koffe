@@ -1,0 +1,14 @@
+[project]
+name = "koffe"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "pyotp>=2.9.0",
+    "pyunifi",
+    "yattag>=1.16.1",
+]
+
+[tool.uv.sources]
+pyunifi = { git = "https://github.com/kleo/pyunifi.git", rev = "330d553177d947fa84a7b32b76d688411132c365" }
